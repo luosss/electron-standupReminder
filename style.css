@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.settings {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.settings label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.settings input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100px;
+    text-align: center;
+}
+
+.settings button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.settings button:hover {
+    background-color: #45a049;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.controls button:hover {
+    background-color: #1976D2;
+}
+
+#pauseNotifications {
+    background-color: #f44336;
+}
+
+#pauseNotifications:hover {
+    background-color: #d32f2f;
+}
+
+#resumeNotifications {
+    background-color: #FF9800;
+}
+
+#resumeNotifications:hover {
+    background-color: #F57C00;
+}
+
+.info {
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.info h2 {
+    margin-top: 0;
+    color: #1976D2;
+}
+
+.info ul {
+    padding-left: 20px;
+}
+
+.info li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.status {
+    text-align: center;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #2e7d32;
+}

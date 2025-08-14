@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>站立提醒系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>站立提醒系统</h1>
+        
+        <div class="settings">
+            <label for="interval">提醒间隔（分钟）：</label>
+            <input type="number" id="interval" min="1" max="180" value="60">
+            <button id="updateInterval">更新</button>
+        </div>
+        
+        <div class="controls">
+            <button id="showNotification">立即提醒一次</button>
+            <button id="pauseNotifications">暂停提醒</button>
+            <button id="resumeNotifications" style="display:none;">恢复提醒</button>
+        </div>
+        
+        <div class="info">
+            <h2>健康小贴士</h2>
+            <ul>
+                <li>每小时站立活动2-3分钟</li>
+                <li>远离屏幕休息眼睛</li>
+                <li>做简单的伸展运动</li>
+                <li>保持良好的坐姿</li>
+            </ul>
+        </div>
+        
+        <div class="status">
+            <p id="statusText">状态：提醒功能运行中</p>
+        </div>
+    </div>
+    
+    <script src="renderer.js"></script>
+</body>
+</html>
