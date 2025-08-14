@@ -2,6 +2,12 @@ const { app, BrowserWindow, Tray, Menu, ipcMain, shell, screen } = require('elec
 const path = require('path');
 const { Notification } = require('electron');
 const { autoUpdater } = require("electron-updater");
+const log = require("electron-log");
+
+// 配置日志
+log.transports.file.level = "debug";
+autoUpdater.logger = log;
+log.info('App starting...');
 
 // 保持对窗口对象的全局引用，否则窗口将被JavaScript垃圾回收自动关闭
 // 配置自动更新
@@ -158,8 +164,9 @@ app.whenReady().then(() => {
   createTray();
   startNotifications();
   
-  // 检查更新（开发环境不检查）
+  // 检查更新
   if (process.env.NODE_ENV !== 'development') {
+    log.info('Checking for updates...');
     autoUpdater.checkForUpdates();
   }
   
@@ -217,36 +224,42 @@ function checkForUpdates() {
 }
 
 autoUpdater.on('checking-for-update', () => {
+  log.info('Checking for update...');
   if (mainWindow) {
     mainWindow.webContents.send('checking-for-update');
   }
 });
 
 autoUpdater.on('update-available', (info) => {
+  log.info('Update available.');
   if (mainWindow) {
     mainWindow.webContents.send('update-available', info);
   }
 });
 
 autoUpdater.on('update-not-available', (info) => {
+  log.info('Update not available.');
   if (mainWindow) {
     mainWindow.webContents.send('update-not-available', info);
   }
 });
 
 autoUpdater.on('error', (err) => {
+  log.error('Error in auto-updater:', err);
   if (mainWindow) {
     mainWindow.webContents.send('update-error', err);
   }
 });
 
 autoUpdater.on('download-progress', (progressObj) => {
+  log.info('Download progress:', progressObj);
   if (mainWindow) {
     mainWindow.webContents.send('download-progress', progressObj);
   }
 });
 
 autoUpdater.on('update-downloaded', (info) => {
+  log.info('Update downloaded');
   if (mainWindow) {
     mainWindow.webContents.send('update-downloaded', info);
   }

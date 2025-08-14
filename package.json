@@ -8,6 +8,7 @@
     "dev": "set NODE_ENV=development&& electron .",
     "build": "electron-builder",
     "publish": "electron-builder --publish always",
+    "release": "electron-builder --publish onTagOrDraft",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
