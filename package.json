@@ -1,7 +1,7 @@
 {
   "name": "stand-up-reminder",
   "version": "1.0.0",
-  "description": "站立提醒系统",
+  "description": "Stand Up Reminder System",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -23,12 +23,12 @@
     "electron-builder": "^24.9.1"
   },
   "dependencies": {
-    "electron-log": "^5.4.2",
+    "electron-log": "^5.1.2",
     "electron-updater": "^6.1.7"
   },
   "build": {
     "appId": "com.standup.reminder",
-    "productName": "站立提醒系统",
+    "productName": "StandUpReminder",
     "directories": {
       "output": "dist"
     },
@@ -41,7 +41,7 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "shortcutName": "站立提醒系统"
+      "shortcutName": "Stand Up Reminder"
     },
     "publish": {
       "provider": "github",
